@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EXOTIXS Pressure Washing — Dayton, NV</title>
+  <meta name="description" content="Commercial, Residential & Fleet washing across Dayton, Nevada and surrounding areas. Licensed & Insured. Free quotes." />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --brand:#0B1E5B;
+      --brand2:#2563EB;
+      --brand3:#06B6D4;
+      --ink:#e5e7eb; /* slate-200 */
+    }
+    body{
+      background:
+        radial-gradient(1200px 600px at -10% 0%, rgba(37,99,235,.12), transparent),
+        linear-gradient(180deg, #0f172a 0%, #111827 100%);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+    .nav-wrap{ background: rgba(15,23,42,.9); border-bottom: 1px solid #0f172a; }
+    .btn{ border-radius: 1rem; padding:.85rem 1.2rem; display:inline-flex; align-items:center; gap:.5rem; font-weight:600; }
+    .btn-primary{ background: linear-gradient(90deg,var(--brand),var(--brand2),var(--brand3)); color:#fff; box-shadow: 0 10px 24px rgba(37,99,235,.35); }
+    .btn-primary:hover{ box-shadow: 0 16px 36px rgba(37,99,235,.45); transform: translateY(-1px); }
+    .btn-outline{ border:1px solid #334155; color:#e5e7eb; }
+    .btn-outline:hover{ background:#0f172a; }
+    .section{ padding: 80px 0; }
+    .shell-1{ background: linear-gradient(180deg, rgba(30,41,59,.6), rgba(17,24,39,.6)); }
+    .shell-2{ background: linear-gradient(180deg, rgba(17,24,39,.6), rgba(30,41,59,.6)); }
+    .tile{ background:#1f2937; border:1px solid rgba(148,163,184,.18); box-shadow: 0 10px 30px rgba(2,6,23,.35); border-radius: 1rem; }
+    .divider{ height:8px; border-radius:999px; background:linear-gradient(90deg,var(--brand),var(--brand2),var(--brand3)); opacity:.6; box-shadow:0 6px 24px rgba(2,6,23,.35); }
+    h1,h2,h3{ color:#f8fafc; }
+    input, textarea, select{ background:#0f172a; color:#e5e7eb; border:1px solid #334155; border-radius:.75rem; padding:.75rem .9rem; }
+    input::placeholder, textarea::placeholder{ color:#94a3b8 }
+    .faq-q{ cursor:pointer; }
+    .faq-a{ max-height:0; overflow:hidden; transition:max-height .35s ease; }
+    .faq.open .faq-a{ max-height:240px; }
+    .hover-tile img.after{ position:absolute; inset:0; opacity:0; transition:opacity .4s ease; }
+    .hover-tile:hover img.after{ opacity:1; }
+    /* Toasts */
+    .toast{ display:flex; align-items:center; gap:.5rem; border-radius:.75rem; padding:.75rem .9rem; margin-top:.75rem; border:1px solid; }
+    .toast-success{ background:#052e1a; color:#a7f3d0; border-color:#10b98144; }
+    .toast-error{ background:#3b0a0a; color:#fecaca; border-color:#ef444444; }
+  </style>
+</head>
+<body>
+  <!-- Hidden Netlify registration form -->
+  <!-- Hidden Netlify registration form (STATIC for detection) -->
+<form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="quote" />
+  <input type="text" name="name" />
+  <input type="text" name="phone" />
+  <input type="email" name="email" />
+  <input type="text" name="service" />
+  <textarea name="message"></textarea>
+  <input type="text" name="bot-field" />
+</form>
+
+  <!-- Top bar -->
+  <div class="bg-[rgba(11,30,91,.95)] text-white text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="px-2 py-1 rounded-full bg-white/10 border border-white/20">Licensed • Insured</span>
+        <span class="px-2 py-1 rounded-full bg-white/10 border border-white/20">Dayton, NV + 2 hr radius</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+17205926726" class="hover:opacity-80">(720) 592-6726</a>
+        <a href="mailto:Jake@exotixspw.com" class="hover:opacity-80">Jake@exotixspw.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav-wrap sticky top-0 z-40 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="/logo.png" alt="logo" class="h-14 w-14 rounded-full object-cover border border-slate-600 shadow-md" />
+        <span class="font-semibold tracking-tight text-lg">EXOTIXS PRESSURE WASHING</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#reviews" class="hover:underline">Reviews</a>
+        <a href="#areas" class="hover:underline">Areas</a>
+        <a href="#faq" class="hover:underline">FAQ</a>
+        <a href="#quote" class="hover:underline">Get a Quote</a>
+      </div>
+      <a href="#quote" class="btn btn-primary">Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="section shell-1">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">We’ll Leave Your Property <span class="text-cyan-300">Sparkling</span>.</h1>
+        <p class="mt-4 text-slate-300">Old‑school workmanship. Modern equipment. Commercial, Residential & Fleet washing across Dayton and surrounding areas.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#quote" class="btn btn-primary">Get My Free Quote</a>
+          <a href="tel:+17205926726" class="btn btn-outline">Call (720) 592-6726</a>
+        </div>
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-slate-300">
+          <div class="px-3 py-2 rounded-full border border-slate-600 bg-slate-900/40">Fully Insured</div>
+          <div class="px-3 py-2 rounded-full border border-slate-600 bg-slate-900/40">Free Estimates</div>
+          <div class="px-3 py-2 rounded-full border border-slate-600 bg-slate-900/40">Hot Water • Eco‑Safe</div>
+          <div class="px-3 py-2 rounded-full border border-slate-600 bg-slate-900/40">Photo Proof</div>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="/gallery/hsw3.jpg" alt="Pressure washing" class="rounded-2xl shadow-xl border border-slate-700" onerror="this.src='/gallery/webpage-2.jpg'">
+      </div>
+    </div>
+  </header>
+
+  <div class="divider max-w-7xl mx-auto my-8"></div>
+
+  <!-- Services -->
+  <section id="services" class="section shell-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">Services We Offer</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="tile p-6">
+          <div class="font-semibold mb-2">Commercial Pressure Washing</div>
+          <p class="text-slate-300 text-sm">Storefronts, sidewalks, loading zones, dumpster pads, signage. After‑hours available.</p>
+        </div>
+        <div class="tile p-6">
+          <div class="font-semibold mb-2">House Wash & Concrete</div>
+          <p class="text-slate-300 text-sm">Soft‑wash siding, driveways, patios, oil/rust treatment. HOA‑friendly rinses.</p>
+        </div>
+        <div class="tile p-6">
+          <div class="font-semibold mb-2">Fleet & Equipment</div>
+          <p class="text-slate-300 text-sm">Trucks, trailers, and heavy equipment. De‑film, decals safe, route programs.</p>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <a href="#quote" class="btn btn-primary">Request a Fast Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before / After -->
+  <section class="section shell-1">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Before & After</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="relative hover-tile tile overflow-hidden">
+          <img src="/gallery/webpage-1.jpg" alt="Before 1" class="w-full h-80 object-cover">
+          <img src="/gallery/webpage-2.jpg" alt="After 1" class="after w-full h-80 object-cover">
+          <div class="absolute bottom-2 left-2 bg-black/60 text-white px-3 py-1 text-sm rounded">Hover: After</div>
+        </div>
+        <div class="relative hover-tile tile overflow-hidden">
+          <img src="/gallery/webpage-3.jpg" alt="Before 2" class="w-full h-80 object-cover">
+          <img src="/gallery/webpage-4.jpg" alt="After 2" class="after w-full h-80 object-cover">
+          <div class="absolute bottom-2 left-2 bg-black/60 text-white px-3 py-1 text-sm rounded">Hover: After</div>
+        </div>
+        <div class="relative hover-tile tile overflow-hidden">
+          <img src="/gallery/webpage-5.jpg" alt="Before 3" class="w-full h-80 object-cover">
+          <img src="/gallery/webpage-6.jpg" alt="After 3" class="after w-full h-80 object-cover">
+          <div class="absolute bottom-2 left-2 bg-black/60 text-white px-3 py-1 text-sm rounded">Hover: After</div>
+        </div>
+        <div class="relative hover-tile tile overflow-hidden">
+          <img src="/gallery/webpage-7.jpg" alt="Before 4" class="w-full h-80 object-cover">
+          <img src="/gallery/webpage-8.jpg" alt="After 4" class="after w-full h-80 object-cover">
+          <div class="absolute bottom-2 left-2 bg-black/60 text-white px-3 py-1 text-sm rounded">Hover: After</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="section shell-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">What Our Clients Say</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="tile p-6 text-slate-300"><p>“Showed up on time, friendly, and the results were dramatic. Will hire again.”</p><div class="mt-3 text-xs text-slate-400">— Commercial storefront</div></div>
+        <div class="tile p-6 text-slate-300"><p>“Driveway looks brand new. Super professional and tidy cleanup.”</p><div class="mt-3 text-xs text-slate-400">— Residential customer</div></div>
+        <div class="tile p-6 text-slate-300"><p>“Fleet wash program keeps our trucks looking sharp—no decals damaged.”</p><div class="mt-3 text-xs text-slate-400">— Fleet manager</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section id="areas" class="section shell-1">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Proudly Serving</h2>
+      <p class="text-slate-300">Dayton, Nevada and surrounding areas — anywhere within a 2‑hour drive.</p>
+      <div class="mt-4 grid sm:grid-cols-2 md:grid-cols-3 gap-3 text-slate-300">
+        <div class="tile p-4">Dayton</div>
+        <div class="tile p-4">Carson City</div>
+        <div class="tile p-4">Reno</div>
+        <div class="tile p-4">Sparks</div>
+        <div class="tile p-4">Gardnerville</div>
+        <div class="tile p-4">Minden</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section shell-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">FAQ</h2>
+      <div class="space-y-3">
+        <div class="tile p-4 faq">
+          <div class="faq-q flex items-center justify-between">
+            <span>Do you use soft wash on siding?</span><span>+</span>
+          </div>
+          <div class="faq-a text-slate-300 mt-2">Yes. We use low pressure with detergent for delicate surfaces.</div>
+        </div>
+        <div class="tile p-4 faq">
+          <div class="faq-q flex items-center justify-between">
+            <span>Are you insured?</span><span>+</span>
+          </div>
+          <div class="faq-a text-slate-300 mt-2">Yes — fully insured. COI available upon request.</div>
+        </div>
+        <div class="tile p-4 faq">
+          <div class="faq-q flex items-center justify-between">
+            <span>How far will you travel?</span><span>+</span>
+          </div>
+          <div class="faq-a text-slate-300 mt-2">Anywhere within about a 2‑hour drive of Dayton, NV.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section id="quote" class="section shell-1">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-6">Get Your Free Quote</h2>
+      <form id="quoteForm" name="quote" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="grid sm:grid-cols-2 gap-4 tile p-6">
+        <input type="hidden" name="form-name" value="quote" />
+        <input type="text" name="bot-field" class="hidden" aria-hidden="true" tabindex="-1" />
+        <input type="hidden" name="notify" value="jake@exotixs.com" />
+        <input type="hidden" name="proposals" value="talon@exotixs.com" />
+        <input name="name" required placeholder="Your name" />
+        <input name="phone" required placeholder="Phone" />
+        <input name="email" type="email" placeholder="Email" />
+        <input name="service" placeholder="Service (e.g., storefront, fleet, driveway)" />
+        <textarea name="message" rows="4" placeholder="Briefly describe the project" class="sm:col-span-2"></textarea>
+        <div class="sm:col-span-2 flex items-center gap-3 justify-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <a href="tel:+17205926726" class="btn btn-outline">Or Call Us</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div class="divider max-w-7xl mx-auto my-8"></div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 py-10 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8 text-slate-300">
+      <div>
+        <div class="flex items-center gap-2 font-semibold mb-3 text-slate-100"><img src="/logo.png" alt="logo" class="h-7 w-7">EXOTIXS PRESSURE WASHING</div>
+        <p class="text-sm">Dayton, NV and surrounding areas. Old‑school courtesy, modern equipment, fair pricing.</p>
+        <div class="flex items-center gap-3 mt-3"><a href="https://www.facebook.com/people/Exotixs-Pressure-Washing/61578231068359/" class="hover:opacity-80">Facebook</a></div>
+      </div>
+      <div>
+        <div class="font-semibold mb-3 text-slate-100">Quick Links</div>
+        <ul class="text-sm space-y-2">
+          <li><a class="hover:underline" href="#services">Services</a></li>
+          <li><a class="hover:underline" href="#reviews">Reviews</a></li>
+          <li><a class="hover:underline" href="#areas">Areas</a></li>
+          <li><a class="hover:underline" href="#quote">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-3 text-slate-100">Compliance</div>
+        <ul class="text-sm space-y-2">
+          <li>EPA BMPs • Water Recovery On Request</li>
+          <li>Hot/Cold Water • Soft‑Wash</li>
+          <li>COI Available • Licensed & Insured</li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-3 text-slate-100">Get in Touch</div>
+        <div class="text-sm mb-2"><a href="tel:+17205926726">(720) 592-6726</a></div>
+        <div class="text-sm mb-2"><a href="mailto:Jake@exotixspw.com">Jake@exotixspw.com</a></div>
+      </div>
+    </div>
+    <div class="text-center text-xs text-slate-500 pt-6">© <span id="year"></span> EXOTIXS PRESSURE WASHING. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq').forEach(f => {
+      f.querySelector('.faq-q').addEventListener('click', () => f.classList.toggle('open'));
+    });
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Netlify fetch submit
+    const form = document.getElementById('quoteForm');
+    if (form) {
+      function showToast(kind, msg) {
+        const div = document.createElement('div');
+        div.className = 'sm:col-span-2 toast ' + (kind==='ok' ? 'toast-success' : 'toast-error');
+        div.setAttribute('role','status');
+        div.setAttribute('aria-live','polite');
+        div.innerHTML = '<span>'+msg+'</span><button type="button" aria-label="Dismiss">&times;</button>';
+        div.querySelector('button').addEventListener('click', ()=> div.remove());
+        form.appendChild(div);
+        setTimeout(()=>div.remove(), 9000);
+      }
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        try {
+          
+const encode = (obj) => Object.keys(obj).map(k => encodeURIComponent(k) + '=' + encodeURIComponent(obj[k])).join('&');
+const obj = {};
+data.forEach((v,k)=>obj[k]=v);
+obj["form-name"] = "quote";
+await fetch("/", {
+  method: "POST",
+  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  body: encode(obj)
+});
+form.reset();
+          showToast('ok', 'Thanks! We received your request.');
+        } catch {
+          showToast('err', 'Hmm, something went wrong. Please try again or call us.');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
